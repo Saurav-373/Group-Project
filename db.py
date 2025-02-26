@@ -28,7 +28,7 @@ def initialize_db():
     conn.commit()
     conn.close()
 
-# Verify User for Login
+# User Login Verification
 def verify_user(username, password):
     conn = sqlite3.connect("parking_system.db")
     cursor = conn.cursor()
