@@ -5,8 +5,7 @@ import datetime
 
 current_user = None
 
-Hello its me i am saurav mainali
-
+HEllo my name is saurav mainali
 def show_login():
     login_window = ttk.Toplevel(root)
     login_window.title("Login")
