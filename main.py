@@ -34,7 +34,7 @@ def show_login():
 def show_signup():
     signup_window = ttk.Toplevel(root)
     signup_window.title("Signup")
-    signup_window.geometry("400x350")
+    signup_window.geometry("450x400")
     ttk.Label(signup_window, text="New Username:").pack(pady=5)
     new_username_entry = ttk.Entry(signup_window)
     new_username_entry.pack(pady=5)
