@@ -5,11 +5,10 @@ import datetime
 
 current_user = None
 
-HEllo my name is saurav mainali
 def show_login():
     login_window = ttk.Toplevel(root)
     login_window.title("Login")
-    login_window.geometry("350x250")
+    login_window.geometry("400x350")
     ttk.Label(login_window, text="Username:").pack(pady=5)
     username_entry = ttk.Entry(login_window)
     username_entry.pack(pady=5)
@@ -35,7 +34,7 @@ def show_login():
 def show_signup():
     signup_window = ttk.Toplevel(root)
     signup_window.title("Signup")
-    signup_window.geometry("350x300")
+    signup_window.geometry("400x350")
     ttk.Label(signup_window, text="New Username:").pack(pady=5)
     new_username_entry = ttk.Entry(signup_window)
     new_username_entry.pack(pady=5)
@@ -59,7 +58,7 @@ def show_signup():
         else:
             messagebox.showerror("Signup Failed", "Username already exists!")
 
-    ttk.Button(signup_window, text="Register", bootstyle="success", command=signup).pack(pady=10)
+    ttk.Button(signup_window, text="Register", bootstyle="primary", command=signup).pack(pady=10)
 
 def show_main_system():
     global root
@@ -194,7 +193,7 @@ def exit_vehicle(tree):
     # Retrieve the selected row's values.
     values = tree.item(selected_item[0])["values"]
     plate_number = values[2]
-    vehicle_type = values[1]  # "Car" or "Motorcycle"
+    vehicle_type = values[1] 
     exit_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     # Get the entry time from the database.
@@ -284,6 +283,6 @@ def logout(root):
 
 root = ttk.Window(themename="cosmo")
 root.title("Parking System - Login")
-root.geometry("300x150")
+root.geometry("400x350")
 ttk.Button(root, text="Login", bootstyle="primary", command=show_login).pack(pady=20)
 root.mainloop()

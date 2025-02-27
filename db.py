@@ -11,8 +11,7 @@ def initialize_db():
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT UNIQUE NOT NULL,
         password TEXT NOT NULL
-    )
-    """)
+    )""")
 
     # Create Vehicles Table
     cursor.execute("""
@@ -23,8 +22,7 @@ def initialize_db():
         entry_time TEXT NOT NULL,
         exit_time TEXT,
         fare REAL
-    )
-    """)
+    )""")
     conn.commit()
     conn.close()
 
