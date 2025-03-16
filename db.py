@@ -2,7 +2,7 @@ import sqlite3
 
 # Database Initialization
 def initialize_db():
-    conn = sqlite3.connect("parking_system.db")
+    conn = sqlite3.connect("parking_system.db",timeout=5)
     cursor = conn.cursor()
 
     # Create Users Table
